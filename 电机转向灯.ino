@@ -3,15 +3,6 @@ int led2=2;
 int led3=8;
 int led4=7;
 
-void setup() {
-    pinMode(5, OUTPUT);
-    pinMode(6, OUTPUT);
-    pinMode(9, OUTPUT);
-    pinMode(10, OUTPUT);
-    Serial.begin(9600);
-}
-int income=0;
-
 void loop() {
   if (Serial.available()>0)
   {
@@ -37,9 +28,15 @@ void loop() {
              break;
     }
   }
-      
-        
-  }
+    
+void setup() {
+    pinMode(5, OUTPUT);
+    pinMode(6, OUTPUT);
+    pinMode(9, OUTPUT);
+    pinMode(10, OUTPUT);
+    Serial.begin(9600);
+}
+int income=0;
   
     void forward()
 {
